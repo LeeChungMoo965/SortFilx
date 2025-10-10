@@ -11,8 +11,7 @@
 }
 
 .general-carousel-track {
-  display: flex;
-  flex-wrap: nowrap; /* 아이템들이 줄바꿈되지 않도록 명시 */
+  white-space: nowrap; /* Flexbox 대신 줄바꿈 방지 속성 사용 */
   overflow-x: auto;
   scrollbar-width: none;
   padding: 0 4%;
@@ -23,7 +22,8 @@
 }
 
 .general-video-card {
-  flex: 0 0 auto;
+  display: inline-block; /* 가로로 정렬되도록 변경 */
+  vertical-align: top; /* 아이템 상단 정렬 */
   width: 220px;
   margin-right: 10px;
   transition: transform 0.3s;
